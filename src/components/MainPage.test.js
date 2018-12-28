@@ -31,10 +31,25 @@ it('filters robots correctly',()=>{
     isPending: false
   }
   const wrapper2=shallow(<MainPage {...mockProps2}/>);
-  expect((wrapper.instance()).filterRobots([])).toEqual([]);
   expect((wrapper2.instance()).filterRobots([])).toEqual([{
     id:3,
     name:'John',
     email:'john@gmail.com'
   }]);
-})
+});
+
+it('filters robots correctly 2',()=>{
+  const mockProps2={
+    onRequestRobots: jest.fn(),
+    robots:[{
+      id:3,
+      name:'John',
+      email:'john@gmail.com'
+    }],
+    searchField: 'elon',
+    isPending: false
+  }
+  const wrapper2=shallow(<MainPage {...mockProps2}/>);
+  expect((wrapper2.instance()).filterRobots([])).toEqual([])
+
+});
