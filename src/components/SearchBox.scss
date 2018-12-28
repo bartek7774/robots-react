@@ -1,0 +1,27 @@
+.searchBox{
+  padding: 0;
+  margin: 0;
+  // background-color: rebeccapurple;
+  display: flex;
+  justify-content: center;
+  input{
+    font-size: 16px;
+    font-family: sans-serif;
+    color: #222;
+    margin: 15px 20px;
+    width: 200px;
+    border: none;
+    border-bottom: 2px solid grey;
+    padding: 10px 8px 8px 15px;
+    border-radius: 5px;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.4);
+    transition: all .3s;
+    &:active,&:focus{
+      background-color: rgba(255, 255, 255, 0.7);
+      border-color:royalblue;
+      box-shadow: 0 0 14px royalblue;
+      width: 50%;
+    }
+  }
+}
